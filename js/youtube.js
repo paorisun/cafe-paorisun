@@ -5,12 +5,7 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// onYouTubePlayerAPIReady 함수 이름은,
-// Youtube IFrame Player API에서 사용하는 이름이기 때문에,
-// 다르게 지정하면 동작하지 않습니다!
-// 그리고 함수는 전역(Global) 등록해야 합니다!
 function onYouTubePlayerAPIReady() {
-  // <div id="player"></div>
   new YT.Player('player', {
     videoId: 'Tdwetb0Mvyc', // 최초 재생할 유튜브 영상 ID
     playerVars: {
@@ -21,7 +16,7 @@ function onYouTubePlayerAPIReady() {
     events: {
       // 영상이 준비되었을 때,
       onReady: function (event) {
-        event.target.mute() // 음소거!
+        event.target.mute() // 음소거한다.
       }
     }
   })
