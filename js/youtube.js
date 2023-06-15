@@ -7,7 +7,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function onYouTubePlayerAPIReady() {
   new YT.Player('player', {
-    videoId: 'm8L75MGedyA', // 최초 재생할 유튜브 영상 ID
+    videoId: 'm8L75MGedyA', // 최초재생할 유튜브 영상 ID
     playerVars: {
       autoplay: true, // 자동 재생 유무
       loop: true, // 반복 재생 유무
